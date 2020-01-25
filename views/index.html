@@ -1,0 +1,62 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Exercise Tracker
+      </h1>
+    </header>
+    <main>
+      <p>Create a new user:</p>
+      <form action="/create-user" method="POST">
+        <label for="user"> Name </label>
+        <input name="user" type="text" required>
+        <input type="submit" value="Submit">
+      </form>
+      <p>Create a new exercise:</p>
+      <form action="/create-exercise" method="POST">
+        <label for="userId"> UserId </label>
+        <input name="userId" type="text" required>
+        <label for="description"> Description</label>
+        <input name="description" type="text" required>
+        <label for="duration"> Duration</label>
+        <input name="duration" type="text" placeholder="minutes" required>
+        <label for="date"> Date </label>
+        <input name="date" type="text" placeholder="YYYY-MM-DD" required>
+        <input type="submit" value="Submit">
+      </form>
+  
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+    
+    
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
